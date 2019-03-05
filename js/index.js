@@ -1,11 +1,11 @@
 const a = parseFloat(prompt('enter A'));
 const b = parseFloat(prompt('enter B'));
 const c = parseFloat(prompt('enter C'));
-const d = calcDiscr(a, b, c);
-const result = solveQard(a, b, c);
+const d = Discr(a, b, c);
+const result = Qard(a, b, c);
 alert(result); 
-function solveQard(a, b, c) {
-    const d = calcDiscr(a, b, c);
+function Qard(a, b, c) {
+    const d = Discr(a, b, c);
     if (d === 0) {
         const x = -b / (2 * a);
         return 'D = 0: X = ' + x;
@@ -18,6 +18,6 @@ function solveQard(a, b, c) {
         return 'D < 0';
     }
 }
-function calcDiscr(a, b, c) {
+function Discr(a, b, c) {
     return b * b - 4 * a * c;
 }
